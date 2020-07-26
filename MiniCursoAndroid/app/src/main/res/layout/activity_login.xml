@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:inputType="textEmailAddress"
         android:hint="Seu Email"/>
 
     <TextView
@@ -44,9 +45,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:inputType="textPassword"
         android:hint="Sua Senha"/>
 
     <Button
+        android:id="@+id/btLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
