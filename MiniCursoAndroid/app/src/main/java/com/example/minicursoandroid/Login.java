@@ -2,6 +2,7 @@ package com.example.minicursoandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,6 +50,10 @@ public class Login extends AppCompatActivity {
                             //VERIFICA SE EMAIL E SENHA SÃO AS MESMAS SALVAS NO SISTEMA
                             if(checkLogin(edtEmail.getText().toString(), edtSenha.getText().toString())){
                                 Toast.makeText(Login.this, "Login efetuado", Toast.LENGTH_LONG).show();
+                                Intent mainIntent = new Intent(Login.this, Home.class);
+                                mainIntent.putExtra("EMAIL",edtEmail.getText().toString());
+                                Login.this.startActivity(mainIntent);
+                                Login.this.finish();
                             }else{
                                 Toast.makeText(Login.this, "Email ou senha incorretos", Toast.LENGTH_LONG).show();
                             }
